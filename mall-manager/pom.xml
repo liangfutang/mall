@@ -9,10 +9,29 @@
   <artifactId>mall-manager</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <dependencies>
+		<dependency>
+			<groupId>com.zjut</groupId>
+			<artifactId>mall-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
   <modules>
   	<module>mall-manager-pojo</module>
   	<module>mall-manager-dao</module>
   	<module>mall-manager-interface</module>
   	<module>mall-manager-service</module>
   </modules>
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<path>/</path>
+					<port>8080</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
