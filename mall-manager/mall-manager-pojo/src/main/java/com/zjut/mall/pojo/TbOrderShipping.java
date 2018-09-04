@@ -1,5 +1,6 @@
 package com.zjut.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,50 +10,26 @@ import java.util.Date;
  * 
  * @date 2018-09-01
  */
-public class TbOrderShipping {
-    /**
-     * 订单ID
-     */
+public class TbOrderShipping implements Serializable  {
+    
+	private static final long serialVersionUID = -5162000619694244904L;
+
     private String orderId;
 
-    /**
-     * 收货人全名
-     */
     private String receiverName;
 
-    /**
-     * 固定电话
-     */
     private String receiverPhone;
 
-    /**
-     * 移动电话
-     */
     private String receiverMobile;
 
-    /**
-     * 省份
-     */
     private String receiverState;
 
-    /**
-     * 城市
-     */
     private String receiverCity;
 
-    /**
-     * 区/县
-     */
     private String receiverDistrict;
 
-    /**
-     * 收货地址，如：xx路xx号
-     */
     private String receiverAddress;
 
-    /**
-     * 邮政编码,如：310001
-     */
     private String receiverZip;
 
     private Date created;

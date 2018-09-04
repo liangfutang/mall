@@ -65,7 +65,6 @@ public class TbItemParamItemExample {
     }
 
     /**
-     * 商品规格和商品的关系表
      * 
      * @author wcyong
      * 
@@ -431,7 +430,6 @@ public class TbItemParamItemExample {
     }
 
     /**
-     * 商品规格和商品的关系表
      * 
      * @author wcyong
      * 

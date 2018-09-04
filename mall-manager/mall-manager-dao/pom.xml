@@ -41,20 +41,21 @@
 			<artifactId>druid</artifactId>
 		</dependency>
 	</dependencies>
-	<build>
+	<!-- <build>
 		<resources>
+			将指定目录中的配置文件复制到target目录中，默认的是将 src/main/resources配置到target目录中
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>
 					<include>**/*.xml</include>
 				</includes>
 			</resource>
-			<!-- <resource>
+			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.xml</include>
 				</includes>
-			</resource> -->
+			</resource>
 		</resources>
-	</build>
+	</build> -->
 </project>

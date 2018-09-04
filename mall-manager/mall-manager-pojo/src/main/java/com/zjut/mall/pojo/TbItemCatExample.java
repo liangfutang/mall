@@ -65,7 +65,6 @@ public class TbItemCatExample {
     }
 
     /**
-     * 商品类目
      * 
      * @author wcyong
      * 
@@ -611,7 +610,6 @@ public class TbItemCatExample {
     }
 
     /**
-     * 商品类目
      * 
      * @author wcyong
      * 

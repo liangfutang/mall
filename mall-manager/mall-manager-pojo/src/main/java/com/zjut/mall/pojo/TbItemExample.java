@@ -65,7 +65,6 @@ public class TbItemExample {
     }
 
     /**
-     * 商品表
      * 
      * @author wcyong
      * 
@@ -821,7 +820,6 @@ public class TbItemExample {
     }
 
     /**
-     * 商品表
      * 
      * @author wcyong
      * 

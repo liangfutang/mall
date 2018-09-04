@@ -1,33 +1,24 @@
 package com.zjut.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 商品描述表
  * 
  * @author wcyong
  * 
  * @date 2018-09-01
  */
-public class TbItemDesc {
-    /**
-     * 商品ID
-     */
+public class TbItemDesc implements Serializable  {
+    
+	private static final long serialVersionUID = -275822200314810134L;
+
     private Long itemId;
 
-    /**
-     * 商品描述
-     */
     private String itemDesc;
 
-    /**
-     * 创建时间
-     */
     private Date created;
 
-    /**
-     * 更新时间
-     */
     private Date updated;
 
     public Long getItemId() {

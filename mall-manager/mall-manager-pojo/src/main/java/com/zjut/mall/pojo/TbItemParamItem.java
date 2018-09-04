@@ -1,25 +1,22 @@
 package com.zjut.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 商品规格和商品的关系表
  * 
  * @author wcyong
  * 
  * @date 2018-09-01
  */
-public class TbItemParamItem {
-    private Long id;
+public class TbItemParamItem implements Serializable  {
+  
+	private static final long serialVersionUID = -2707811475767620353L;
 
-    /**
-     * 商品ID
-     */
+	private Long id;
+
     private Long itemId;
 
-    /**
-     * 参数数据，格式为json格式
-     */
     private String paramData;
 
     private Date created;

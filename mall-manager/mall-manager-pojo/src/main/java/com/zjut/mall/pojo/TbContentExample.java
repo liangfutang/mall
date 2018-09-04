@@ -64,13 +64,6 @@ public class TbContentExample {
         distinct = false;
     }
 
-    /**
-     * 
-     * 
-     * @author wcyong
-     * 
-     * @date 2018-09-01
-     */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
@@ -850,13 +843,6 @@ public class TbContentExample {
         }
     }
 
-    /**
-     * 
-     * 
-     * @author wcyong
-     * 
-     * @date 2018-09-01
-     */
     public static class Criterion {
         private String condition;
 

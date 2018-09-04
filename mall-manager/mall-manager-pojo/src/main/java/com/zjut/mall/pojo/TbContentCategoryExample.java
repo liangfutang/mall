@@ -65,7 +65,6 @@ public class TbContentCategoryExample {
     }
 
     /**
-     * 内容分类
      * 
      * @author wcyong
      * 
@@ -611,7 +610,6 @@ public class TbContentCategoryExample {
     }
 
     /**
-     * 内容分类
      * 
      * @author wcyong
      * 

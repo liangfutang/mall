@@ -1,5 +1,7 @@
 package com.zjut.mall.pojo;
 
+import java.io.Serializable;
+
 /**
  * 
  * 
@@ -7,42 +9,24 @@ package com.zjut.mall.pojo;
  * 
  * @date 2018-09-01
  */
-public class TbOrderItem {
-    private String id;
+public class TbOrderItem implements Serializable  {
+    
+	private static final long serialVersionUID = 874520944635295206L;
 
-    /**
-     * 商品id
-     */
+	private String id;
+
     private String itemId;
 
-    /**
-     * 订单id
-     */
     private String orderId;
 
-    /**
-     * 商品购买数量
-     */
     private Integer num;
 
-    /**
-     * 商品标题
-     */
     private String title;
 
-    /**
-     * 商品单价
-     */
     private Long price;
 
-    /**
-     * 商品总金额
-     */
     private Long totalFee;
 
-    /**
-     * 商品图片地址
-     */
     private String picPath;
 
     public String getId() {

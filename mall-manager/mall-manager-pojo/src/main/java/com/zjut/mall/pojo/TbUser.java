@@ -1,35 +1,26 @@
 package com.zjut.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 用户表
  * 
  * @author wcyong
  * 
  * @date 2018-09-01
  */
-public class TbUser {
-    private Long id;
+public class TbUser implements Serializable  {
+    
+	private static final long serialVersionUID = 7673738559402737527L;
 
-    /**
-     * 用户名
-     */
+	private Long id;
+
     private String username;
 
-    /**
-     * 密码，加密存储
-     */
     private String password;
 
-    /**
-     * 注册手机号
-     */
     private String phone;
 
-    /**
-     * 注册邮箱
-     */
     private String email;
 
     private Date created;

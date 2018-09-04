@@ -65,7 +65,6 @@ public class TbUserExample {
     }
 
     /**
-     * 用户表
      * 
      * @author wcyong
      * 
@@ -581,7 +580,6 @@ public class TbUserExample {
     }
 
     /**
-     * 用户表
      * 
      * @author wcyong
      * 

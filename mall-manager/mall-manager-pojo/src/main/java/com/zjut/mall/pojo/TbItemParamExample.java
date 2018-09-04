@@ -65,7 +65,6 @@ public class TbItemParamExample {
     }
 
     /**
-     * 商品规则参数
      * 
      * @author wcyong
      * 
@@ -431,7 +430,6 @@ public class TbItemParamExample {
     }
 
     /**
-     * 商品规则参数
      * 
      * @author wcyong
      * 
