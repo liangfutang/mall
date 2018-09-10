@@ -62,9 +62,9 @@
 			</dependency>
 			<!-- Jackson Json处理工具包 -->
 			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-				<version>${jackson.version}</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.35</version>
 			</dependency>
 			<!-- httpclient -->
 			<dependency>
@@ -225,7 +225,7 @@
 
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
