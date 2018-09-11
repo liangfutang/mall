@@ -32,7 +32,7 @@ public class ItemCatServiceImpl implements ItemCatService{
 			node.setText(itemCat.getName());
 			node.setState(itemCat.getIsParent() ? "closed":"open");
 			result.add(node);
-		}
+		}  
 		return result;
 	}
 
