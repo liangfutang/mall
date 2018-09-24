@@ -21,6 +21,7 @@ public class FastDFSClient {
 		if (conf.contains("classpath:")) {
 			conf.replace("classpath:", this.getClass().getResource("/").getPath());
 		}
+		System.out.println("打印修改后的路径:" + conf);
 		ClientGlobal.init(conf);
 		trackerClient = new TrackerClient();
 		connection = trackerClient.getConnection();

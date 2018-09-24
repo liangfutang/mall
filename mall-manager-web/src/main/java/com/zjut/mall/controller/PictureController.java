@@ -1,11 +1,8 @@
 package com.zjut.mall.controller;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.csource.common.MyException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,11 +20,13 @@ public class PictureController {
 	@RequestMapping("/pic/upload")
 	public String picUpload(MultipartFile uploadFile) {
 		String originalFilename = uploadFile.getOriginalFilename();
-		String exName = originalFilename.substring(originalFilename.lastIndexOf("." + 1));
+		System.out.println("打印全名:"+originalFilename);
+		String exName = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
+		System.out.println("打印扩展名:"+exName);
 		String resultStr;
 		Map<String, Object> result = new HashMap<>();
 		try {
-			FastDFSClient fastDFSClient = new FastDFSClient("classpath:resource/client.conf");
+			FastDFSClient fastDFSClient = new FastDFSClient("D:/WorkSpace/Java/mall/mall-manager-web/src/main/resources/resource/client.conf");
 			String url = fastDFSClient.uploadFile(uploadFile.getBytes(), exName);
 			url = IMAGE_SERVER_URL + url;
 			result.put("error", 0);
