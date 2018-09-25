@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mall.common.pojo.EasyUITreeNode;
+import com.mall.common.pojo.MallResult;
 import com.zjut.mall.content.service.ContentCategoryService;
 
 @RestController
@@ -19,5 +20,10 @@ public class ContentCategoryController {
 	@RequestMapping("/content/category/list")
 	public List<EasyUITreeNode> getContentCategoryList(@RequestParam(value="id", defaultValue="0") Long parentId) {
 		return contentCategoryService.getContentCategoryList(parentId);
+	}
+	
+	@RequestMapping("/content/category/create")
+	public MallResult addContentCategory(Long parentId, String name) {
+		return contentCategoryService.addContentCategory(parentId, name);
 	}
 }
