@@ -26,7 +26,7 @@ public class PictureController {
 		String resultStr;
 		Map<String, Object> result = new HashMap<>();
 		try {
-			FastDFSClient fastDFSClient = new FastDFSClient("D:/WorkSpace/Java/mall/mall-manager-web/src/main/resources/resource/client.conf");
+			FastDFSClient fastDFSClient = new FastDFSClient("E:/StudyWorkSpace/java/mall/mall-manager-web/src/main/resources/resource/client.conf");
 			String url = fastDFSClient.uploadFile(uploadFile.getBytes(), exName);
 			url = IMAGE_SERVER_URL + url;
 			result.put("error", 0);

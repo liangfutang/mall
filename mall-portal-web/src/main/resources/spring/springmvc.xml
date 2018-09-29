@@ -24,6 +24,6 @@
 	
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="mall-portal-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.199.100:2181"/>	
-	<!-- <dubbo:reference interface="com.taotao.service.ItemService" id="itemService" /> -->
+	<dubbo:registry protocol="zookeeper" address="10.43.100.29:2181"/>	
+	<dubbo:reference interface="com.zjut.mall.content.service.ContentService" id="contentService" />
 </beans>      
