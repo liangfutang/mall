@@ -51,7 +51,7 @@ public class IndexController {
 			result.add(node);
 		}
 		String resultJson = JSONObject.toJSONString(result);
-		model.addAttribute(resultJson);
+		model.addAttribute("ad1", resultJson);
 		return "index";
 	}
 }
