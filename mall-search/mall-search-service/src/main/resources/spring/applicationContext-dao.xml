@@ -37,5 +37,5 @@
 		<property name="basePackage" value="com.taotao.mapper,com.taotao.search.mapper" />
 	</bean> -->
 	<!-- 配置接口存储的包，用来扫描mapper接口 -->
-	<mybatis:scan base-package="com.zjut.mall.dao" />
+	<mybatis:scan base-package="com.zjut.mall.dao,com.zjut.mall.search.mapper" />
 </beans>
