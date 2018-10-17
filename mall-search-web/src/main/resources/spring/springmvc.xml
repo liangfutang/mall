@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -10,7 +11,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 	<!-- 加载属性文件 -->
-	<context:property-placeholder location="classpath:resource/resource.properties"/>
+	<context:property-placeholder
+		location="classpath:resource/resource.properties" />
 	<!-- 配置注解驱动 -->
 	<mvc:annotation-driven />
 	<!-- 视图解析器 -->
@@ -19,11 +21,17 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!-- 配置全局异常处理器 -->
+	<bean
+		class="com.zjut.mall.search.exception.GlobalExceptionResolver"></bean>
 	<!-- 配置包扫描器，扫描@Controller注解的类 -->
-	<context:component-scan base-package="com.zjut.mall.search.controller"/>
-	
+	<context:component-scan
+		base-package="com.zjut.mall.search.controller" />
+
 	<!-- 引用dubbo服务 -->
-	<dubbo:application name="mall-search-web"/>
-	<dubbo:registry protocol="zookeeper" address="10.43.100.36:2181"/>	
-	<!-- <dubbo:reference interface="com.taotao.content.service.ContentService" id="contentService" /> -->
+	<dubbo:application name="mall-search-web" />
+	<dubbo:registry protocol="zookeeper"
+		address="10.43.100.36:2181" />
+	<!-- <dubbo:reference interface="com.taotao.content.service.ContentService" 
+		id="contentService" /> -->
 </beans>      
