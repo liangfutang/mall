@@ -11,7 +11,7 @@ import redis.clients.jedis.Jedis;
 public class RedisTest {
 
 	public static void main(String[] args) {
-		Jedis jedis = new Jedis("10.43.100.29", 6379);
+		Jedis jedis = new Jedis("10.43.100.36", 6379);
 		jedis.auth("123456");
 		System.out.println("测试响应:" + jedis.ping());
 		jedis.set("name", "chen");

@@ -3,7 +3,16 @@ package com.zjut.mall.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.jms.Topic;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
@@ -27,6 +36,12 @@ public class ItemServiceImpl implements ItemService {
 	@Autowired
 	private TbItemDescMapper itemDescMapper;
 	
+	@Autowired
+	private JmsTemplate jmsTemplate;
+	
+	@Resource(name="itemAddtopic")
+	private Topic topic;
+	
 	@Override
 	public TbItem getItemById(Long id) {
 		return itemMapper.selectByPrimaryKey(id);
@@ -46,7 +61,7 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public MallResult addItem(TbItem item, String desc) {
-		Long id = IDUtils.genItemId();
+		final Long id = IDUtils.genItemId();
 		item.setId(id);
 		item.setStatus((byte)1);
 		item.setCreated(new Date());
@@ -59,6 +74,17 @@ public class ItemServiceImpl implements ItemService {
 		itemDesc.setCreated(new Date());
 		itemDesc.setUpdated(new Date());
 		itemDescMapper.insert(itemDesc);
+		
+		// 向activemq发送添加的商品消息
+		jmsTemplate.send(topic, new MessageCreator() {
+			
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				TextMessage textMessage = session.createTextMessage("" + id);
+				return textMessage;
+			}
+		});
+		
 		return MallResult.ok();
 	}
 
