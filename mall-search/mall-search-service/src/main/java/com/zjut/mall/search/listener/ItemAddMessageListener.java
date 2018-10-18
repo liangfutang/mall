@@ -50,6 +50,7 @@ public class ItemAddMessageListener implements MessageListener {
 			solrServer.add(document);
 			// 提交
 			solrServer.commit();
+			System.out.println("消息提交到索引库中");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
